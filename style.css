@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  /* Primary */
+
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  /* Neutral */
+
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+  --baseFont: "Red Hat Display", sans-serif;
+  --baseFontSize: 16px;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--baseFont);
+  font-size: var(--baseFontSize);
+  background: var(--paleBlue) url(./images/pattern-background-desktop.svg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--veryPaleBlue);
+  border-radius: 10px;
+}
+.main-img img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.text {
+  padding: 0 3rem;
+  text-align: center;
+}
+.text h1 {
+  padding: 2rem 0 1rem 0;
+  color: var(--darkBlue);
+}
+.text p {
+  color: var(--desaturatedBlue);
+  padding-bottom: 1rem;
+}
+.package {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: var(--paleBlue);
+  padding: 1rem 0;
+  border-radius: 5px;
+}
+.package img {
+  width: 40px;
+  height: 40px;
+}
+.package a {
+  justify-content: flex-end;
+}
+.annual {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.annual span:last-child {
+  color: var(--desaturatedBlue);
+}
+.package a:hover {
+  text-decoration: none;
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.cta button {
+  padding: 0.8rem 3rem;
+  border: none;
+  background-color: var(--brightBlue);
+  color: var(--veryPaleBlue);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 1px 2px 5px var(--brightBlue);
+  cursor: pointer;
+}
+.cta button:hover {
+  background-color: var(--desaturatedBlue);
+}
+.cta .cancel-order {
+  text-decoration: none;
+  padding: 0.8rem 3rem;
+  margin-bottom: 1rem;
+}
+.cta .cancel-order:hover {
+  color: var(--darkBlue);
+}
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 400px) {
+  body {
+    background: url(./images/pattern-background-mobile.svg) var(--paleBlue);
+  }
+  main .card {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .package {
+    font-size: 12px;
+  }
+  .attribution {
+    display: none;
+  }
+}
